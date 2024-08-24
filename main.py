@@ -45,8 +45,7 @@ def get():
             ),
             Div(
                 H2("Research", style="font-size: 1.5em; color: black; font-weight: 600; margin-bottom: 10px;"),
-                P(A("Research Paper Title 1", href="#", target="_blank", style="color: #0077B5; text-decoration: none;"), " - Publication Date", style="color: black; font-weight: 300; margin-bottom: 8px; line-height: 1.5;"),
-                P(A("Research Paper Title 2", href="#", target="_blank", style="color: #0077B5; text-decoration: none;"), " - Publication Date", style="color: black; font-weight: 300; margin-bottom: 8px; line-height: 1.5;"),
+                P(A("Identifying Eye-Movement Patterns in Neurological Disorders to Assess Cognitive & Motor Function", href="https://drive.google.com/file/d/1JMxkbt4A1oNN1rGnZ8TaYGdhAQHUW_Br/view?usp=sharing", target="_blank", style="color: #0077B5; text-decoration: none;"), " - 2018-22 (Regeneron Science Talent Search 7th Place)", style="color: black; font-weight: 300; margin-bottom: 8px; line-height: 1.5;"),
                 style="margin-bottom: 30px;"
             ),
             Div(
