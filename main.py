@@ -64,6 +64,4 @@ def get():
         style="background-color: white; color: black; min-height: 100vh; font-family: 'DM Sans', sans-serif;"
     )
                  
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+serve()
