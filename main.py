@@ -9,7 +9,7 @@ def get():
         Div(
             Div(
                 Div(
-                    Img(src="/static/profile.jpg", alt="Profile Picture", 
+                    Img(src="static/profile.jpg", alt="Profile Picture", 
                         style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;"),
                     style="display: inline-block; vertical-align: middle; margin-right: 20px;"
                 ),
@@ -17,10 +17,10 @@ def get():
                     H1("Alay Shah", style="font-size: 2.2em; color: black; font-weight: bold; margin-bottom: 5px;"),
                     P("Healthtech founder in Boston, MA", style="font-size: 1.1em; color: black; margin-bottom: 15px; font-weight: 300;"),
                     Div(
-                        A(Img(src="/static/linkedinicon.jpg", alt="LinkedIn", style="width: 20px; height: 20px;"), 
+                        A(Img(src="static/linkedinicon.jpg", alt="LinkedIn", style="width: 20px; height: 20px;"), 
                           href="https://linkedin.com/in/alayrshah", target="_blank",
                           style="background-color: #0077B5; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; text-decoration: none;"),
-                        A(Img(src="/static/xicon.png", alt="X (Twitter)", style="width: 20px; height: 20px;"), 
+                        A(Img(src="static/xicon.png", alt="X (Twitter)", style="width: 20px; height: 20px;"), 
                           href="https://twitter.com/alay0shah", target="_blank",
                           style="background-color: #333333; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;"),
                         style="margin-top: 10px;"
@@ -63,5 +63,7 @@ def get():
         ),
         style="background-color: white; color: black; min-height: 100vh; font-family: 'DM Sans', sans-serif;"
     )
-
-serve()
+                 
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
