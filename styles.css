@@ -1,0 +1,158 @@
+body {
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Container Logic:
+   - max-width keeps content from getting too wide
+   - margin: 0 auto centers the container horizontally
+   - padding creates space around the content */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+}
+
+/* Header Flex Container:
+   - display: flex creates a flexible container
+   - align-items: center vertically centers the children
+   - justify-content: center horizontally centers everything */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Profile Image Container:
+   - margin-right creates space between image and text */
+.profile-image-container {
+    flex-shrink: 0; /* Prevents image from shrinking */
+    margin-right: 40px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
+
+/* Header Content:
+   - Will grow to fill available space
+   - display: flex makes it a flex container for vertical stacking */
+.header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.4em;
+    color: black;
+    font-weight: bold;
+    margin: 0 0 15px 0; /* Bottom margin of 2px */
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 1.7em;  /* Increased from 1.5em */
+    color: black;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: black;
+    margin: 0 0 8px 0; /* Bottom margin of 8px */
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.location {
+    font-size: 1.2em;
+    color: black;
+    margin: 0 0 16px 0; /* Bottom margin of 16px */
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.1;
+}
+
+.location-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #34D399;
+    border-radius: 50%;
+}
+
+.social-icons {
+    margin: 0; /* No margin needed as it's the last element */
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    background-color: #0077B5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.social-icon.twitter {
+    background-color: #333333;
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+p {
+    color: black;
+    font-weight: 400;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 1.1em;  /* Added explicit font size */
+}
+
+a {
+    color: #0077B5;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness:
+   - Changes layout when screen width <= 600px
+   - flex-direction: column stacks elements vertically */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image-container {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .header-content {
+        align-items: center;
+    }
+}
